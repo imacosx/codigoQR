@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Generador de QR</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <h2>Genera tu Codigo QR</h2>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="">Descripción del Sitio</label>
+                    <input type="text" name="descripcion" id="descripcion" class="form-control" placeholder=" ejemplo: Facebook" >
+                    <div id="resp_desc"></div>
+                </div>
+                <label for="">Introduzca la url a generar</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon3">https://</span>
+                    </div>
+                    <input type="text" class="form-control" name="codigo_qr" id="codigo_qr" aria-describedby="basic-addon3" placeholder="ejemplo: wwww.facebook.com" >
+                  </div>
+                  <div id="resp_cod"></div>
+                <div class="form-group">
+                    <button id="btn_generar" class="btn btn-primary btn-sm">Generar</button>
+                    <a class="btn btn-success btn-sm" href="#" id="btn_descargar" style="display:none">Descargar</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div id="qr-final"></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script> 
+    <script src="js/qrcode.js"></script>
+    <script src="js/mainQR.js"></script>
+</body>
+</html>
+
